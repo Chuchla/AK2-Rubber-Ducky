@@ -1,0 +1,40 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{polski}
+
+
+\title{Rubber Ducky}
+\author{Jakub Chuchla, Olaf Sujata, Łukasz Czerwiec, Małgorzata Andrasz}
+\date{May 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Wstęp}
+Projekt Rubber Ducky ma na celu poznanie sposobu komunikacji z urzadzeniami perferiów. Przygotowaliśmy urządzenie z oprogramowaniem emulującym wciśnięcia klawiszy klawiatury po podłaczeniu do komputera przez USB. Zasada działania jest analogiczna do urządzenia Rubber Ducky. 
+
+\section{Co to Rubber Ducky?}
+
+Rubber Ducky to z pozoru przypominające pendrive urządzenie zaliczane jest do kategorii tzw. bad USB, czyli narzędzi, które są nam w stanie wyrządzić jakąś szkodę po podłączeniu do portu USB komputera
+
+\section{Opis działania}
+Rubber Ducky, chociaż wygląda jak pamięć flash, w rzeczywistości jest wykrywany przez system operacyjny jako urządzenie HID (Human Interface Device), a konkretnie klawiatura. Po podłączeniu do komputera zaczyna wysyłać zaprogramowane wcześniej ciągi znaków, poleceń i skrótów klawiaturowych. Efekt jest zatem taki, jakby osoba, która podłącza urządzenie do swojego komputera pozwoliła intruzowi skorzystać z własnej klawiatury.
+
+\section{Zagrożenia}
+Rubber Ducky niesie ze sobą wiele różnych zagrożeń, na przykład pozwala stwoerzyć fałszywe okno logowania do Windowsa wykradając w ten sposób dane logowania, lub przesłać wszystkie hasła przeglądarki Chrome na serwer hackera. Dzisiejesze Rubber Ducky potrafią nawet na sprawdzenie do jakiego komputera został podłączony hakerski pendrive (PC czy Mac) i dopiero wtedy wykonanie dostosowanych do danego sprzętu poleceń. Ponadto USB Rubber Ducky może teraz kodować dane w formacie binarnym i przesyłać je wykorzystując sygnały zapalające na klawiaturze lampkę od caps locka. Dzieło Kitchena jest niezwykle potężne, ale ma jedną wadę. Żeby zadziałało, trzeba je najpierw podłączyć do portu USB komputera. Jeżeli nigdy nie będzie wkładać do swojego komputera przenośnych pamięci nieznanego pochodzenia, to nie ma się czego obawiać.
+
+
+
+
+\begin{thebibliography}{9}
+
+\bibitem{lamport94}
+  https://opensecurity.pl/arsenal-ethical-hackera-rubber-ducky/
+  https://www.komputerswiat.pl/aktualnosci/bezpieczenstwo/falszywy-hakerski-pendrive-stal-sie-jeszcze-grozniejszy-jest-jeden-sposob-zeby-sie/7l4v3re
+  
+  
+\end{thebibliography}
+
+\end{document}
+
