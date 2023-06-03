@@ -14,6 +14,7 @@
 \tableofcontents
 
 \section{Słownik}
+
 \begin{itemize}
     \item HID - human input device lub human interface device. Urządzenia służące do wsprowadzania danych przez człowieka. Należą do nich między innymi klawiatura, mysz, czy dżojstik.
     \item USB HID - technologia umożliwiająca podłączenie urządzenia do komputera bez konieczności wgrywania sterownika.
@@ -21,36 +22,41 @@
 \end{itemize}
 
 \section{Wstęp}
+
 USB Rubber Ducky jest urządzeniem przypominającym pendrive'a, lecz wykrywanym przez komputer, jako urządzenie HID. Należy do kategorii "bad USB", czyli narzędzi, które mają wyrządzić szkodę po podłoczeniu do portu USB komputera. Jego twórcą jest Darren Kitchen, który stworzył je, by ukazać słabość modelu zaufania komputera, który po wykryciu USB Rubber Ducky, jako klawiatury, ufa, że to użytkownik komunikuje się z nim poprzez klikanie i pisanie.
 
 \section{Opis działania}
+
 W celu wykorzystania urządzenia USB Rubber Ducky należy je najpierw zaprogramować. Programowanie odbywa się poprzez wgranie napisanego i przekompilowanego wcześniej na postać binarną skryptu na umieszczoną w urządzeniu kartę pamięci. Po wgraniu skryptu na USB Rubber Ducky, aby nośnik zadziałał trzeba go podłączyć do portu USB komputera. Po wpięciu do portu USB Rubber Ducky jest wykrywane przez komputer jako klawiatura i zaczyna wysyłać napisane wcześniej ciągi znaków, poleceń i skrótów klawiszowych.
 
 \section{Zagrożenia}
-Rubber Ducky niesie ze sobą wiele różnych zagrożeń, tutaj wymienimy kilka z nich:
+
+Rubber Ducky niesie ze sobą wiele różnych zagrożeń:
 \begin{itemize}
-    \item pozwala stworzyć fałszywe okno logowania do Windowsa wykradając w ten sposób dane logowania lub przesłać wszystkie hasła przeglądarki Chrome na serwer hackera. 
-    \item dzisiejsze Rubber Ducky pozwalają nawet na sprawdzenie do jakiego komputera został podłączony hakerski pendrive (PC czy Mac) i dopiero wtedy wykonanie dostosowanych do danego sprzętu poleceń, ponadto USB Rubber Ducky może teraz kodować dane w formacie binarnym i przesyłać je wykorzystując sygnały zapalające na klawiaturze lampkę od caps locka
-    \item Kradzież danych logowania: Rubber Ducky może skopiować lub przechwycić wprowadzane dane logowania, takie jak nazwy użytkowników i hasła, które następnie mogą być wykorzystane przez atakującego do uzyskania nieautoryzowanego dostępu do kont i systemów.
-    \item Wstrzykiwanie złośliwego kodu: Atakujący może użyć Rubber Ducky do wstrzykiwania złośliwego kodu lub skryptów na zainfekowanym komputerze. Może to prowadzić do instalacji szkodliwego oprogramowania, takiego jak wirusy, trojany czy keyloggery, które mogą kontrolować system lub kraść dane.
-    \item Wykonanie zautomatyzowanych działań: Rubber Ducky może wykorzystać skrypty do wykonywania automatycznych działań, takich jak uruchamianie szkodliwego oprogramowania, przechwytywanie obrazów ekranu, zmiana ustawień systemowych lub przeglądarki, co może prowadzić do utraty prywatności, naruszenia bezpieczeństwa lub poważnych szkód dla użytkownika.
-    \item  Przejęcie sesji lub zdalne sterowanie: Atakujący może wykorzystać Rubber Ducky do przejęcia sesji użytkownika lub zdalnego sterowania komputerem, co pozwala im na monitorowanie działań, kradzież danych lub kontrolę nad systemem.
-    \item Wprowadzanie zmian w systemie: Rubber Ducky może zmieniać ustawienia systemowe, takie jak firewall, antywirusy czy aktualizacje, aby umożliwić łatwiejsze wdrożenie złośliwego oprogramowania lub uniknąć wykrycia przez zabezpieczenia.
-    \item  Atak fizyczny na infrastrukturę: Rubber Ducky może być wykorzystany do przeprowadzenia ataków fizycznych na infrastrukturę, takie jak wstrzykiwanie złośliwego kodu w systemy sterowania przemysłowego, bankomaty lub urządzenia IoT.
+    \item Pozwala stworzyć fałszywe okno logowania do Windowsa wykradając w ten sposób dane logowania lub przesłać wszystkie hasła przeglądarki Chrome na serwer hackera. 
+    \item Umożliwiają sprawdzenie do jakiego komputera został podłączony hakerski pendrive - PC czy Mac. Na podstawie otrzymanych informacji, wykonane zostaną polecenia, które będą kompatybilne z danym sprzętem. Ponadto Rubber Ducky może teraz kodować dane w formacie binarnym i przesyłać je wykorzystując sygnały zapalające na klawiaturze lampkę od caps locka.
+    \item Kradzież danych logowania - Rubber Ducky może skopiować lub przechwycić wprowadzane dane logowania, takie jak nazwy użytkowników i hasła, które następnie mogą być wykorzystane przez atakującego do uzyskania nieautoryzowanego dostępu do kont i systemów.
+    \item Wstrzykiwanie złośliwego kodu - Atakujący może użyć Rubber Ducky do wstrzykiwania złośliwego kodu lub skryptów na zainfekowanym komputerze. Może to prowadzić do instalacji szkodliwego oprogramowania, takiego jak wirusy, trojany czy keyloggery, które mogą kontrolować system lub kraść dane.
+    \item Wykonanie zautomatyzowanych działań - Rubber Ducky może wykorzystać skrypty do wykonywania automatycznych działań, takich jak uruchamianie szkodliwego oprogramowania, przechwytywanie obrazów ekranu, zmiana ustawień systemowych lub przeglądarki, co może prowadzić do utraty prywatności, naruszenia bezpieczeństwa lub poważnych szkód dla użytkownika.
+    \item  Przejęcie sesji lub zdalne sterowanie - Atakujący może wykorzystać Rubber Ducky do przejęcia sesji użytkownika lub zdalnego sterowania komputerem, co pozwala im na monitorowanie działań, kradzież danych lub kontrolę nad systemem.
+    \item Wprowadzanie zmian w systemie - Rubber Ducky może zmieniać ustawienia systemowe, takie jak firewall, antywirusy czy aktualizacje, aby umożliwić łatwiejsze wdrożenie złośliwego oprogramowania lub uniknąć wykrycia przez zabezpieczenia.
+    \item  Atak fizyczny na infrastrukturę - Rubber Ducky może być wykorzystany do przeprowadzenia ataków fizycznych na infrastrukturę, takie jak wstrzykiwanie złośliwego kodu w systemy sterowania przemysłowego, bankomaty lub urządzenia IoT.
 
     
 \end{itemize} 
 
 \section{Działania prewencyjne}
-Jak możemy bronić nasz komputer przed takim atakiem:
+
+Takie ataki mogą być bardzo groźne dla naszych urządzeń jak i dla nas - ktoś może wykraść dane do logowania, np. do banku.
+Oto kilka sposobów, jak możemy bronić nasz komputer przed takimi atakami:
 \begin{itemize}
-    \item świadomość i edukacja: dowiedz się więcej o atakach "Rubber Ducky". Wiedza na temat zagrożeń i podstawowych zasad bezpieczeństwa cyfrowego pomoże Ci lepiej rozpoznawać potencjalne zagrożenia i unikać ich.
-    \item przede wszystkim nie możemy pozwolić na podłączenie pendriva nieznanego pochodzenia do naszego urządzenia, nie zostawiaj nigdy swojego komputera bez opieki w publicznym miejscu
-    \item zaktualizowane oprogramowanie: Regularnie aktualizuj oprogramowanie na swoim komputerze, w tym system operacyjny, przeglądarkę internetową i inne aplikacje. Aktualizacje często zawierają łatki bezpieczeństwa, które chronią przed znanymi lukami w zabezpieczeniach,
-    \item Programy antywirusowe i antymalware: Zainstaluj i regularnie aktualizuj programy antywirusowe i antymalware na swoim komputerze. Skanuj system w poszukiwaniu potencjalnych zagrożeń, a także uważaj na ostrzeżenia i blokady, które mogą wskazywać na potencjalne złośliwe oprogramowanie.
-    \item Firewall: Włącz firewall (zaporę sieciową) na swoim komputerze, aby kontrolować ruch sieciowy i blokować podejrzane połączenia.
-    \item Wyłączanie automatycznego uruchamiania: Zablokuj automatyczne uruchamianie skryptów lub programów z urządzeń zewnętrznych, takich jak pendrive'y. Możesz to zrobić, dostosowując ustawienia urządzenia lub oprogramowania do zarządzania urządzeniami pamięci masowej.
-    \item Monitorowanie aktywności USB: Jeśli jesteś zaniepokojony możliwością ataku "Rubber Ducky", możesz skorzystać z narzędzi monitorujących aktywność na porcie USB, takich jak USBGuard, aby wykryć i zablokować podejrzane działania.
+    \item Świadomość i edukacja - dowiedz się więcej o atakach "Rubber Ducky". Wiedza na temat zagrożeń i podstawowych zasad bezpieczeństwa cyfrowego pomoże Ci lepiej rozpoznawać potencjalne zagrożenia i unikać ich.
+    \item Uniemożliwienie kontaktu fizycznego z urządzeniem - nie możemy pozwolić na podłączenie pendrive'a nieznanego pochodzenia do naszego komputera. Nie zostawiaj nigdy swojego urządzenia bez opieki w publicznym miejscu.
+    \item Zaktualizowane oprogramowanie - Regularnie aktualizuj oprogramowanie na swoim komputerze, w tym system operacyjny, przeglądarkę internetową i inne aplikacje. Aktualizacje często zawierają łatki bezpieczeństwa, które chronią przed znanymi lukami w zabezpieczeniach,
+    \item Programy antywirusowe i antymalware - Zainstaluj i regularnie aktualizuj programy antywirusowe i antymalware na swoim komputerze. Skanuj system w poszukiwaniu potencjalnych zagrożeń. Uważaj na ostrzeżenia i blokady, które mogą wskazywać na potencjalne złośliwe oprogramowanie na twoim komputerze.
+    \item Firewall - Włącz firewall (zaporę sieciową) na swoim komputerze, aby kontrolować ruch sieciowy i blokować podejrzane połączenia.
+    \item Wyłączanie automatycznego uruchamiania - Zablokuj automatyczne uruchamianie skryptów lub programów z urządzeń zewnętrznych, takich jak pendrive'y. Możesz to zrobić, dostosowując ustawienia urządzenia lub oprogramowania do zarządzania urządzeniami pamięci masowej.
+    \item Monitorowanie aktywności USB - Jeśli jesteś zaniepokojony możliwością ataku "Rubber Ducky", możesz skorzystać z narzędzi monitorujących aktywność na porcie USB, takich jak USBGuard, aby wykryć i zablokować podejrzane działania.
 \end{itemize}
 
 Trzeba pamiętać, że żadna metoda nie jest w pełni skuteczna i niezawodna. Dlatego warto stosować kombinację różnych środków ostrożności i zasad bezpieczeństwa cyfrowego, aby jak najlepiej chronić się przed różnymi rodzajami ataków, w tym atakiem "Rubber Ducky".
