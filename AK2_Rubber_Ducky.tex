@@ -67,11 +67,11 @@ Oto kilka sposobów, jak możemy bronić nasz komputer przed takimi atakami:
 Trzeba pamiętać, że żadna metoda nie jest w pełni skuteczna i niezawodna. Dlatego warto stosować kombinację różnych środków ostrożności i zasad bezpieczeństwa cyfrowego, aby jak najlepiej chronić się przed różnymi rodzajami ataków, w tym atakiem "Rubber Ducky".
 
 \section{Cel projektu}
-Celem projektu było stworzenie czterech Rubber Ducky. Każde z nich miało wykonywać inne zadanie, mianowicie:
+Projekt ma na celu poznanie sposobu komunikacji z urządzeniami peryferiów. Stworzyliśmy cztery Rubber Ducky -każde z nich wykonuje inne zadanie, mianowicie:
 \begin{itemize}
-    \item wyświetlenie krótkiego tekstu w notatniku
-    \item wykonanie prostego skryptu
-    \item zmiana przycisków na klawiaturze podłączonej do komputera
+    \item Wyświetlenie krótkiego tekstu w notatniku
+    \item Wykonanie prostego skryptu
+    \item Zmiana przycisków na klawiaturze podłączonej do komputera
     \item DOPISAĆ CO ROBI PROGRAM 4
 \end{itemize}
 Dokładne opisy napisanych programów można znaleźć w sekcji 8. Napisanie czterech programów o różnych działaniach ma na celu pokazanie w praktyce jak różne zastosowanie może mieć Rubber Ducky.
@@ -87,16 +87,23 @@ Wybrany przez nas mikrokontroler to Digispark Attiny 85, pokazany na poniższym 
     \label{fig:enter-label}
 \end{figure}
 
-Jak widać na powyższym zdjęciu, nasz mikrokontroler jest bardzo mały. Jest to jednym z powodów, przez które został przez nas wybrany. Przez jego wielkość chcieliśmy pokazać, że nawet takie małe urządzenie może być bardzo niebezpieczne. Drobna wielkość wcale nie oznacza, że nasze Rubber Ducky ma mniejsze możliwości. Kolejnym powodem wyboru tego mikrokontrolera jest fakt, że ma on wbudowane złącze USB, dzięki czemu możemy użyć go jako Rubber Ducky od razu po napisaniu kodu, bez konieczności modyfikowania hardware'u. Wybraliśmy ten mikrokontroler również dlatego, że można o nim łatwo znaleźć dużo informacji oraz jest kompatybilny ze środowiskiem programistycznym Arduino. Na wybór tego mikrokontrolera wpłynęła również jego niska cena.
+Jak widać na powyższym zdjęciu, nasz mikrokontroler jest bardzo mały. Jest to jednym z powodów, przez które został przez nas wybrany. Przez jego wielkość chcieliśmy pokazać, że nawet takie małe urządzenie może być bardzo niebezpieczne. Drobna wielkość wcale nie oznacza, że nasze Rubber Ducky ma mniejsze możliwości - jedynym ograniczeniem była nasza wyobraźnia i wielkość pamięci mikrokontrolera. Kolejnym powodem wyboru tego mikrokontrolera jest fakt, że ma on wbudowane złącze USB, dzięki czemu możemy użyć go jako Rubber Ducky od razu po napisaniu kodu, bez konieczności modyfikowania hardware'u. Wybraliśmy ten mikrokontroler również dlatego, że można o nim łatwo znaleźć dużo informacji oraz jest kompatybilny ze środowiskiem programistycznym Arduino. Na wybór tego mikrokontrolera wpłynęła również jego niska cena.
 
 \subsection{Sposób napisania programów}
 W poprzednim podrozdziale wspomnieliśmy, że jednym z powodów wyboru mikrokontrolera była kompatybilność ze środowiskiem programistycznym Arduino. Chcieliśmy napisać nasze programy w tym IDE, ponieważ oprócz tego, że jest popularne, wspierano ono pisanie kodu w języku C++. Wybraliśmy ten język, ponieważ jesteśmy z nim dobrze zaznajomieni i używamy go również na innych kursach znajdujących się w programie naszych studiów.
-Kod pisaliśmy używając biblioteki DigiKeyboard.h. Bibilioteka ta znacznie ułatwiła nam pracę, ponieważ zawarte w niej funkcje pozwalają emulować działanie klawiatury. Dzięki użyciu tej biblioteki nie musimy również szukać wartości odpowiednich klawiszy w HID usage table, bo są one już w bibliotece zdefiniowane. Ważne jest też to, że funkcje w tej bibliotece pozwalają nam na emulowanie kilku klawiszy jednocześnie, ponieważ ze względu na to, że mamy jedynie klawiaturę, musimy używać skrótów klawiszowych systemu Windows, żeby móc zapisać i włączyć napisany przez nas skrypt na komputerze do którego podłączymy nasze Rubber Ducky.
-W napisanych przez nas programach używamy funkcji delay, która każe skryptowi zaczekać przed wykonaniem dalszych instrukcji. Jest to ważne dla niezawodności działania Rubber Ducky. Niektóre komputery mogą potrzebować trochę więcej czasu na przetworzenie danych wysyłanych przez klawiaturę. Dzięki zaczekaniu chwili przed "wciśnięciem" kolejnych klawiszy mamy pewność, że poprzednia akcja zostanie obsłużona przed próbą wykonania kolejnej, dzięki czemu wszystkie wykonają się poprawnie. System może mieć również problem z przepustowością przetwarzania danych z klawiatury, przez co przy zbyt szybkim wysłaniu zbyt wielu poleceń, któreś może się nie wykonać. 
+Kod pisaliśmy używając biblioteki DigiKeyboard.h. Bibilioteka ta umożliwiła nam pracę, ponieważ zawarte w niej funkcje pozwalają emulować działanie klawiatury. W bibliotece zdefiniowano wartości znaków odpowiadającym klawiszom klawiatury oraz przyciskom modyfikującym takim jak CTRL, ALT bądź GUI, dzięki czemu nie musieliśmy sami szukać ich w HID usage table. Ważne jest też to, że funkcje w tej bibliotece pozwalają nam na emulowanie kilku klawiszy jednocześnie, ponieważ ze względu na to, że mamy jedynie klawiaturę, musimy używać skrótów klawiszowych systemu Windows, żeby móc zapisać i włączyć napisany przez nas skrypt na komputerze do którego podłączymy nasze Rubber Ducky.
+W napisanych przez nas programach używamy funkcji delay, która każe skryptowi zaczekać przed wykonaniem dalszych instrukcji. Jest to ważne, by Rubber Ducky działało niezawodnie. Niektóre komputery mogą potrzebować trochę więcej czasu na przetworzenie danych wysyłanych przez klawiaturę. Dzięki zaczekaniu chwili przed "wciśnięciem" kolejnych klawiszy mamy pewność, że poprzednia akcja zostanie obsłużona przed próbą wykonania kolejnej - daje nam to pewność poprawnego wykonania się wszystkich instrukcji. System może mieć również problem z przepustowością przetwarzania danych z klawiatury, przez co przy zbyt szybkim wysłaniu zbyt wielu poleceń, któreś może się nie wykonać. 
 
 \subsection{Napotkane problemy}
-Pierwszym problemem jaki napotkaliśmy była instalacja sterowników do naszego mikrokontrolera, ale po krótkiej "zabawie" z nimi, mogliśmy zacząć pisać kod. 
-Kolejny problem pojawił się przy próbie wypisania podanego tekstu na ekran przy użyciu funkcji println. Po przeanalizowaniu napisanego kodu oraz tabeli ASCII okazało się, że mikrokontroler wyświetla znaki cofnięte o wartość 8 w kodzie ASCII, więc przy wyświetlaniu tekstów musimy dodać tę wartość do każdego ze znaków, zrobiliśmy to w pętli for.
+\begin{itemize}
+    \item Pierwszym problemem jaki napotkaliśmy była instalacja sterowników do naszego mikrokontrolera, ale po krótkiej "zabawie" z nimi, mogliśmy zacząć pisać kod. 
+    \item Kolejny problem pojawił się przy próbie wypisania podanego tekstu na ekran przy użyciu funkcji println. Po przeanalizowaniu napisanego kodu oraz tabeli ASCII okazało się, że mikrokontroler wyświetla znaki cofnięte o wartość 8 w kodzie ASCII, więc przy wyświetlaniu tekstów musimy dodać tę wartość do każdego ze znaków. Błąd naprawiliśmy używając pętli for. Mylne działanie instrukcji wynika prawdopodobnie z tego, że instrukcja println nie jest zdefiniowana w bibliotece DigiKeyboard.h, lecz w bibliotece Print, która jest dziedziczona przez DigiKeyboard.h. Pomimo jej mylnego działania umożliwia nam ona przesyłanie długich ciągów znaków (string) co bardzo ułatwia pisanie kodu.
+    \item %Chuchla 
+Nie wszystkie przyciski były zdefiniowane w bibliotece DigiKeyboard.h, a ich użycie było niezbędne do działania skryptu. By poradzić sobie z problemem znaleźliśmy odpowiadające wartości takowych przycisków w HID Usage Table. Przykładowo "strzałce w dół" odpowiadają wartości 81/0x51. Przez wysłanie "stroke'a" takiej wartości (dziesiętnej/szesnastkowej) otrzymywaliśmy zamierzony efekt.
+    \item %Chuchla opisać że mało pamięci i inne . 
+\end{itemize}
+
+
 
 
 \section{Opis działania programów}
