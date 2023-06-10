@@ -31,9 +31,15 @@
 
 USB Rubber Ducky jest urządzeniem przypominającym pendrive'a, lecz wykrywanym przez komputer, jako urządzenie HID. Należy do kategorii "bad USB", czyli narzędzi, które mają wyrządzić szkodę po podłączeniu do portu USB komputera. Jego twórcą jest Darren Kitchen, który stworzył je, by ukazać słabość modelu zaufania komputera, który po wykryciu USB Rubber Ducky, jako klawiatury, ufa, że to użytkownik komunikuje się z nim poprzez klikanie i pisanie.
 
+Projekt Rubber Ducky ma na celu poznanie sposobu komunikacji z urządzeniami peryferyjnymi. Przygotowaliśmy urządzenie z oprogramowaniem emulującym wciśnięcia klawiszy klawiatury po podłączeniu do komputera przez USB. Zasada działania jest analogiczna do urządzenia Rubber Ducky. 
+
+Rubber to z pozoru przypominające pendrive urządzenie zaliczane jest do kategorii tzw. bad USB, czyli narzędzi, które są nam w stanie wyrządzić jakąś szkodę po podłączeniu do portu USB komputera
+
 \section{Opis działania}
 
 W celu wykorzystania urządzenia USB Rubber Ducky należy je najpierw zaprogramować. Programowanie odbywa się poprzez wgranie napisanego i skompilowanego wcześniej na postać binarną skryptu na umieszczoną w urządzeniu kartę pamięci. Po wgraniu skryptu na USB Rubber Ducky, aby nośnik zadziałał trzeba go podłączyć do portu USB komputera. Po wpięciu do portu USB Rubber Ducky jest wykrywane przez komputer jako klawiatura i zaczyna wysyłać napisane wcześniej ciągi znaków, poleceń i skrótów klawiszowych.
+
+Rubber Ducky, chociaż wygląda jak pamięć flash, w rzeczywistości jest wykrywany przez system operacyjny jako urządzenie HID (Human Interface Device), a konkretnie klawiatura. Po podłączeniu do komputera zaczyna wysyłać zaprogramowane wcześniej ciągi znaków, poleceń i skrótów klawiaturowych. Efekt jest zatem taki, jakby osoba, która podłącza urządzenie do swojego komputera pozwoliła intruzowi skorzystać z własnej klawiatury.
 
 \section{Zagrożenia}
 
@@ -161,10 +167,10 @@ W napisanych przez nas programach używamy funkcji delay, która każe skryptowi
         
 
 \section{Wnioski}
-
+    Rozwój projektu przede wszystkim przyniósł nam wszystkim kilka zagwozdek. Nauka obsługi nowego środowiska jakim był system kontroli wersji w postaci GitHub'a. Praca w grupie, która wbrew wszystkiemu nie jest na naszym kierunku tak często kultywowana - może nie w takim stopniu. Wybór oraz argumentacja dlaczego skorzystaliśmy akurat z tego hardware'u, a nie z innego. Praca z nowym IDE, z którym żadne z nas nie miało styczności. Próby nawiązania połączenia z naszym urządzeniem "tak żeby działało", by w końcu móc zacząć na nim pracować. Następnie tworzenie samych oprogramowań, które wymagały od nas merytorycznego przygotowania przed ich budową. Wszystkie z tych kwestii potrzebowały kilku godzin bądź dni by je rozwiązać, niemniej jednak, czujemy, że rozwinęliśmy się jako studenci i przyszli programiści budując ten projekt. Wiedza, którą zdobyliśmy pracując z systemem kontroli wersji oraz tworzeniem dokumentacji w znacznym stopniu przyczyni się do łatwiejszej transformacji z roli studenta w czynnego programistę - rozpoczynając pracę w IT na pewno spotkamy się z Git'em jak i z czynnością pisania dokumentacji związanej z naszym kodem niezależnie czy wybierzemy ścieżkę pisania niskopoziomowego czy wysokopoziomowego. Cieszymy się, że udało nam się stworzyć "coś co działa" od podstaw i z praktycznie zerową wiedzą w tej dziedzinie tak by osiągnąć zadowalające nas wyniki. Napotkane problemy rozwiązywaliśmy na bieżąco, poszerzając swoją wiedzę adekwatnie do poziomu zagwozdki. Jesteśmy usatysfakcjonowani z wyboru tego tematu i nie żałujemy tej decyzji.
 
 \section{Podsumowanie}
-
+      
 
 \begin{thebibliography}{9}
 
