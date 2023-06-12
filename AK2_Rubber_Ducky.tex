@@ -12,7 +12,7 @@
 \maketitle
 
 \tableofcontents
-
+\newpage
 \section{Słownik}
 \begin{itemize}
     \item HID - human input device lub human interface device. Urządzenia służące do wprowadzania danych przez człowieka. Należą do nich między innymi klawiatura, mysz, czy dżojstik.
@@ -138,7 +138,7 @@ W napisanych przez nas programach używamy funkcji delay, która każe skryptowi
         \begin{figure}[h]
     \centering
     \includegraphics[scale=0.5]{Media/DNS.png}
-    \caption{Grafika przedstawiająca działanie ataku DNS Poisoning}
+    \caption{Grafika przedstawiająca działanie naszego ataku DNS Poisoning}
     \label{fig:enter-label}
     \end{figure}
     \end{itemize}    
@@ -147,28 +147,27 @@ W napisanych przez nas programach używamy funkcji delay, która każe skryptowi
         \item Działanie - Program uruchamia notatnik w trybie administratora, następnie tworzy plik Batch, którego zadaniem jest modyfikacja działania rejestru USBHUB3 - ustawia wartość klucza start na 4 co powoduje nie włączenie się rejestru po ponownym uruchomieniu komputera co skrypt również robi. Po stworzeniu pliku jest on uruchamiany z poziomu pulpitu w trybie administratora.
         \item Cel - Stworzenie programu, który zmieni działanie komputera w taki sposób, że użytkownik straci nad nim kontrole w całkowitym bądź częściowym stopniu.
         \item Wnioski - Tworząc ten program musieliśmy poszerzyć naszą ogólną wiedze związaną z tematem rejestrów w Systemie Windows. Przeprowadziliśmy testy, które polegały głównie na metodzie prób i błędów - "wyłączaliśmy" różne rejestry tak by osiągnąć zamierzony efekt czyli pozbyć się sygnału w portach USB (Rysunek 5). Uznaliśmy, że dobrym pomysłem byłoby po prostu wyłączenie wszystkich rejestrów odpowiedzialnych za porty USB tj. USBHUB, USBHUB3, USBEHCI, USBSTOR itd., lecz znów natknęliśmy na problem z niewystarczającą ilością pamięci w mikrokontrolerze. Niestety skrypt był za długi i urządzenie by go nie "udźwignęło". Nie chcieliśmy zaniechać tego pomysłu, więc "wstrzeliliśmy się" w odpowiedni rejestr i uzyskaliśmy zamierzony efekt - przynajmniej dla portów USB3.
-        \begin{figure}[h]
+    \end{itemize} 
+\newpage
+\begin{figure}[h]
     \centering
-    \includegraphics[scale=0.4]{Media/Rejestr.png}
+    \includegraphics[scale=0.40]{Media/Rejestr.png}
     \caption{Rejestr USBHUB3 - ustawienie wartości start na 4 czyli tryb "disable"}
     \label{fig:enter-label}
     \end{figure}
     \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.5]{Media/Rejestr1.png}
+    \includegraphics[scale=0.45]{Media/Rejestr1.png}
     \caption{Sposób dostania się do edytora rejestrów oraz ścieżka prowadząca do rejestru USBHUB3}
     \label{fig:enter-label}
-    \end{figure}
-    \end{itemize} 
-    
-        
-
+    \end{figure}    
+\newpage
 \section{Wnioski}
     Rozwój projektu przede wszystkim przyniósł nam wszystkim kilka zagwozdek. Nauka obsługi nowego środowiska jakim był system kontroli wersji w postaci GitHub'a. Praca w grupie, która wbrew wszystkiemu nie jest na naszym kierunku tak często kultywowana - może nie w takim stopniu. Wybór oraz argumentacja dlaczego skorzystaliśmy akurat z tego hardware'u, a nie z innego. Praca z nowym IDE, z którym żadne z nas nie miało styczności. Próby nawiązania połączenia z naszym urządzeniem "tak żeby działało", by w końcu móc zacząć na nim pracować. Następnie tworzenie samych oprogramowań, które wymagały od nas merytorycznego przygotowania przed ich budową. Wszystkie z tych kwestii potrzebowały kilku godzin bądź dni by je rozwiązać, niemniej jednak, czujemy, że rozwinęliśmy się jako studenci i przyszli programiści budując ten projekt. Wiedza, którą zdobyliśmy pracując z systemem kontroli wersji oraz tworzeniem dokumentacji w znacznym stopniu przyczyni się do łatwiejszej transformacji z roli studenta w czynnego programistę - rozpoczynając pracę w IT na pewno spotkamy się z Git'em jak i z czynnością pisania dokumentacji związanej z naszym kodem niezależnie czy wybierzemy ścieżkę pisania niskopoziomowego czy wysokopoziomowego. Cieszymy się, że udało nam się stworzyć "coś co działa" od podstaw i z praktycznie zerową wiedzą w tej dziedzinie tak by osiągnąć zadowalające nas wyniki. Napotkane problemy rozwiązywaliśmy na bieżąco, poszerzając swoją wiedzę adekwatnie do poziomu zagwozdki. Jesteśmy usatysfakcjonowani z wyboru tego tematu i nie żałujemy tej decyzji.
 
 \section{Podsumowanie}
-      
-
+      Jako grupie udało nam się stworzyć urządzenie swym działaniem przypominające tytułowe Rubber Ducky. Urządzenie ma bazę 4 oprogramowań, z których każde spełnia inną funkcje. Wszystkie oprogramowania działają według opracowanych wcześniej założeń.
+\newpage
 \begin{thebibliography}{9}
 
 \bibitem{}
